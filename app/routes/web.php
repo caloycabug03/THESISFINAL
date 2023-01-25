@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FrontdeskController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,8 +20,11 @@ Route::get('/', function () {
     return view('website');
 });
 
-Route::get('/reservation' , [BookingStepsController::class , 'index'])->name('bookNow');
+Route::get('/reserve' , [BookingStepsController::class , 'index'])->name('bookNow');
 Route::post('/reservation/store' , [BookingStepsController::class , 'store'])->name('store');
+
+
+
 
 
 
@@ -28,8 +33,18 @@ Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified'
+
+    //frontdesk routes
 ])->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+ 
+
+    Route::get('/reservation' , [FrontdeskController::class , 'index'])->name('reservation');
+
+
+
+    
 });
+
