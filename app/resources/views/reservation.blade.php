@@ -25,21 +25,14 @@
                     <th>GUEST EMAIL</th>
                     <th>GUEST PHONE</th>
                     <th>CHECK IN</th>
-                    <th>CHECK OUT</th>
+                    <th>CHECK OUT</th>  
                     <th>ADULT #</th>
                     <th>CHILDREN #</th>
-                    <th>INFANT #</th>
-                    <th>NET TOTAL</th>
                     <th>DISCOUNT</th>
                     <th>TOTAL</th>
                     <th>TAX</th>
                     <th>PAID</th>
-                    <th>BALANCE</th>
-                    <th>USER</th>
                     <th>BOOKING TIME</th>
-
-
-                    
                   </tr>
                   </thead>
                   <tbody>
@@ -56,222 +49,13 @@
                     <td></td>
 
                   </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
+                 
+                  
+                
                   </tbody>
                   <tfoot>
                   <tr>
-                    <th>ID</th>
+                  <th>ID</th>
                     <th>STATUS</th>
                     <th>ROOM</th>
                     <th>GUEST NAME</th>
@@ -279,17 +63,13 @@
                     <th>GUEST EMAIL</th>
                     <th>GUEST PHONE</th>
                     <th>CHECK IN</th>
-                    <th>CHECK OUT</th>
+                    <th>CHECK OUT</th>  
                     <th>ADULT #</th>
                     <th>CHILDREN #</th>
-                    <th>INFANT #</th>
-                    <th>NET TOTAL</th>
                     <th>DISCOUNT</th>
                     <th>TOTAL</th>
                     <th>TAX</th>
                     <th>PAID</th>
-                    <th>BALANCE</th>
-                    <th>USER</th>
                     <th>BOOKING TIME</th>
                   </tr>
                   </tfoot>
