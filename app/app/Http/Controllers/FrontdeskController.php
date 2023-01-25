@@ -12,13 +12,24 @@ class FrontdeskController extends Controller
     public function reservation()
     {
         //
-        return view('reservation');
+        return view('frontdesk.reservation');
     }
 
     public function rates()
     {
         //
-        return view('rates');
+        return view('frontdesk.rates');
+    }
+
+    public function guests()
+    {
+        //
+        return view('frontdesk.guests');
+    }
+    public function roomtype()
+    {
+        //
+        return view('frontdesk.roomtype');
     }
 
 }

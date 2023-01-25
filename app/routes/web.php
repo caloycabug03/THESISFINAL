@@ -16,7 +16,7 @@ use App\Http\Controllers\FrontdeskController;
 
 
 Route::get('/', function () {
-    return view('website');
+    return view('website/website');
 });
 
 Route::get('/reserve' , [BookingStepsController::class , 'index'])->name('bookNow');
@@ -36,12 +36,16 @@ Route::middleware([
     //frontdesk routes
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        return view('layouts/dashboard');
     })->name('dashboard');
  
 
     Route::get('/reservation' , [FrontdeskController::class , 'reservation'])->name('reservation');
     Route::get('/rates' , [FrontdeskController::class , 'rates'])->name('rates');
+    Route::get('/guests' , [FrontdeskController::class , 'guests'])->name('guests');
+    Route::get('/roomtype' , [FrontdeskController::class , 'roomtype'])->name('roomtype');
+
+
 
 
 

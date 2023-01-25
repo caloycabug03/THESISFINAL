@@ -18,7 +18,7 @@ class BookingStepsController extends Controller
     {
         //
         $bookings = bookingsteps::all();
-        return view('booking', compact('bookings'))->with(request());
+        return view('website.booking', compact('bookings'))->with(request());
     }
 
     /**
@@ -50,7 +50,7 @@ class BookingStepsController extends Controller
 
         $bookings->save();
 
-        return redirect('booking')->with('Success', 'Data Saved');
+        return redirect('website.booking')->with('Success', 'Data Saved');
 
 
     }
