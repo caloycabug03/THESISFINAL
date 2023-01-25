@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontdeskController;
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -41,7 +40,9 @@ Route::middleware([
     })->name('dashboard');
  
 
-    Route::get('/reservation' , [FrontdeskController::class , 'index'])->name('reservation');
+    Route::get('/reservation' , [FrontdeskController::class , 'reservation'])->name('reservation');
+    Route::get('/rates' , [FrontdeskController::class , 'rates'])->name('rates');
+
 
 
 

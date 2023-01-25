@@ -1,3 +1,5 @@
+
+
 @extends('layouts/app')
 
 
@@ -18,43 +20,47 @@
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
                   <tr>
-                    <th>STATUS</th>
-                    <th>CHECK IN</th>
-                    <th>CHECK OUT</th>
-                    <th>ADULT #</th>
-                    <th>CHILDREN #</th>
+                    <th>ROOM TYPE</th>
+                    <th>ROOM #</th>
+                    <th>RATES</th>
+                    <th>DURATION</th>
                   </tr>
                   </thead>
                   <tbody>
                   <tr>
-                    <td>ACTIVE</td>
-                    <td>12/12/2022
+                    <td>SINGLE ROOM</td>
+                    <td>212
                     </td>
-                    <td>12/12/2022</td>
-                    <td> 4</td>
-                    <td>2</td>
+                    <td>₱250</td>
+                    <td> 24hrs.</td>
                   </tr>
                   <tr>
-                    <td>ACTIVE</td>
-                    <td>12/12/2022
+                    <td>SINGLE ROOM</td>
+                    <td>212
                     </td>
-                    <td>12/12/2022</td>
-                    <td> 4</td>
-                    <td>2</td>
-                  </tr> <tr>
-                    <td>ACTIVE</td>
-                    <td>12/12/2022
+                    <td>₱250</td>
+                    <td> 24hrs.</td>
+                  </tr>
+                  <tr>
+                    <td>SINGLE ROOM</td>
+                    <td>212
                     </td>
-                    <td>12/12/2022</td>
-                    <td> 4</td>
-                    <td>2</td>
-                  </tr> <tr>
-                    <td>ACTIVE</td>
-                    <td>12/12/2022
+                    <td>₱250</td>
+                    <td> 24hrs.</td>
+                  </tr>
+                  <tr>
+                    <td>SINGLE ROOM</td>
+                    <td>212
                     </td>
-                    <td>12/12/2022</td>
-                    <td> 4</td>
-                    <td>2</td>
+                    <td>₱250</td>
+                    <td> 24hrs.</td>
+                  </tr>
+                  <tr>
+                    <td>SINGLE ROOM</td>
+                    <td>212
+                    </td>
+                    <td>₱250</td>
+                    <td> 24hrs.</td>
                   </tr>
                  
                   </tbody>
@@ -64,7 +70,6 @@
                     <th>CHECK IN</th>
                     <th>CHECK OUT</th>
                     <th>ADULT #</th>
-                    <th>CHILDREN #</th>
                   </tr>
                   </tfoot>
                 </table>
