@@ -13,7 +13,8 @@
 
               <!-- ADD MODAL BUTTON -->
               <!-- Button trigger modal -->
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                          <h2>Users</h2>
+                          <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModalCenter">
                             Add
                           </button>
 
@@ -32,17 +33,17 @@
                                         <form>
                                           <div class="form-row">
                                             <div class="form-group col-md-6">
-                                              <label for="inputEmail4">Name</label>
+                                              <label for="inputEmail4">Customer Name</label>
                                               <input type="text" class="form-control" id="name">
                                             </div>
                                             <div class="form-group">
-                                            <label for="inputAddress">Contact Number</label>
+                                            <label for="inputAddress">Room Number</label>
                                             <input type="text" class="form-control" id="contactNumber" >
                                           </div>
                                         
                                           </div>
                                           <div class="form-group">
-                                            <label for="inputAddress">Address</label>
+                                            <label for="inputAddress">Check-in Date</label>
                                             <input type="text" class="form-control" id="inputAddress" >
                                           </div>
                                           <div class="form-group">
@@ -50,21 +51,24 @@
                                             <input type="date" class="form-control" id="inputAddress" >
                                           </div>
                                           <div class="form-group">
-                                            <label for="inputAddress">Check-in Date</label>
+                                            <label for="inputAddress">Duration</label>
+                                            <input type="text" class="form-control" id="inputAddress" >
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="inputAddress">Total Price</label>
+                                            <input type="text" class="form-control" id="inputAddress" >
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="inputAddress">Paid</label>
+                                            <input type="text" class="form-control" id="inputAddress" >
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="inputAddress">Action</label>
                                             <input type="date" class="form-control" id="inputAddress" >
                                           </div>
-                                          
                                                                               
                                                                             
-                                            <div class="form-group col-md-6">
-                                              <label for="inputState">Room Type</label>
-                                              <select id="inputState" class="form-control">
-                                                <option>Single Bedroom</option>
-                                                <option>Double Bedroom</option>
-                                                <option>Family Bedroom</option>
-
-                                              </select>
-                                            </div>
+                                    
                                            
                                           
                                         </form>
@@ -86,53 +90,39 @@
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
                   <tr>
-                    <th>STATUS</th>
-                    <th>CHECK IN</th>
-                    <th>CHECK OUT</th>
-                    <th>ADULT #</th>
-                    <th>CHILDREN #</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Action</th>
+
+
+
+
                   </tr>
                   </thead>
                   <tbody>
-                  <tr>
-                    <td>ACTIVE</td>
-                    <td>12/12/2022
-                    </td>
-                    <td>12/12/2022</td>
-                    <td> 4</td>
-                    <td>2</td>
-                  </tr>
-                  <tr>
-                    <td>ACTIVE</td>
-                    <td>12/12/2022
-                    </td>
-                    <td>12/12/2022</td>
-                    <td> 4</td>
-                    <td>2</td>
-                  </tr> <tr>
-                    <td>ACTIVE</td>
-                    <td>12/12/2022
-                    </td>
-                    <td>12/12/2022</td>
-                    <td> 4</td>
-                    <td>2</td>
-                  </tr> <tr>
-                    <td>ACTIVE</td>
-                    <td>12/12/2022
-                    </td>
-                    <td>12/12/2022</td>
-                    <td> 4</td>
-                    <td>2</td>
-                  </tr>
+                 
+                  @foreach ($users as $user)
+                    <tr>
+                      <td>{{ $user->name }}</td>
+                      <td>{{ $user->email }}</td>
+                      <td>{{ $user->name }}</td>
+                      <td>Action</td>
+
+
+                    </tr>
+                  @endforeach
+
                  
                   </tbody>
                   <tfoot>
                   <tr>
-                    <th>STATUS</th>
-                    <th>CHECK IN</th>
-                    <th>CHECK OUT</th>
-                    <th>ADULT #</th>
-                    <th>CHILDREN #</th>
+                    
+                       <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Action</th>
+
                   </tr>
                   </tfoot>
                 </table>

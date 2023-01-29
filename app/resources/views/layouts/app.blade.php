@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- icons plugins -->
+  <script src="https://kit.fontawesome.com/e0dac7b697.js" crossorigin="anonymous"></script>
 </head>
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 <div class="wrapper">
@@ -85,8 +87,8 @@
       <!-- Messages Dropdown Menu -->
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="far fa-comments"></i>
-          <span class="badge badge-danger navbar-badge">1</span>
+        <i class="fa-solid fa-user"></i>
+        
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
           <a href="#" class="dropdown-item">
@@ -184,7 +186,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
+    <a href="{{route('dashboard')}}" class="brand-link">
       <!-- <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8"> -->
       <span class="brand-text font-weight-dark centered center-align text">PMS</span>
     </a>
@@ -194,10 +196,15 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <!-- <img src="#" class="img-circle elevation-2" alt="User Image"> -->
         </div>
         <div class="info">
-          <a href="#" class="d-block">FRONT DESK</a>
+        @if (Auth::user()->name == null)
+                {{ route('login') }}
+            @else
+                <a href="#" class="d-block">{{ Auth::user()->name}}</a>
+                <!-- {{-- {{ Auth::user()->fname +" "+Auth::user()->lname }} --}} -->
+            @endif
         </div>
       </div>
 
@@ -218,60 +225,123 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+
+
+               <!-- Dashboard sidebar -->
+          <li class="nav-item ">
+            <a href="{{route('dashboard')}}" class="nav-link ">
+            <i class="fas fa-home"></i>
               <p>
                 Dashboard
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
+            </li>
+
+               <!-- Transaction sidebar -->
+            <li class="nav-item menu-close">
+            <a href="#" class="nav-link ">
+            <i class="fas fa-cash-register"></i>
+              <p>
+                Transactions
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+
             <ul class="nav nav-treeview">
             <li class="nav-item">
-                <a href="{{route ('reservation')}}"class="nav-link">
+                <a href="{{route ('activeguest')}}"class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Active Guests</p>
+                </a>
+              </li>
+
+              </ul>
+
+              <ul class="nav nav-treeview">
+            <li class="nav-item">
+                <a href="{{route('expireguest')}}"class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Expired Guests</p>
+                </a>
+              </li>
+              </ul>
+            </li>
+               <!-- Services sidebar -->
+
+            <li class="nav-item menu-close">
+            <a href="#" class="nav-link ">
+            <i class="fas fa-house-user"></i>
+              <p>
+                Services
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+            <li class="nav-item">
+                <a href="{{route('room')}}"class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Rooms</p>
+                </a>
+              </li>
+
+              </ul>
+
+              <ul class="nav nav-treeview">
+            <li class="nav-item">
+                <a href="{{route('roomtype')}}"class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Room Types</p>
+                </a>
+              </li>
+              </ul>
+              <ul class="nav nav-treeview">
+            <li class="nav-item">
+                <a href="{{route('roomstatus')}}"class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Room Status</p>
+                </a>
+              </li>
+              </ul>
+            </li>
+               <!-- Accounts sidebar -->
+
+            <li class="nav-item menu-close">
+            <a href="#" class="nav-link ">
+            <i class="fas fa-users"></i>
+              <p>
+                Accounts
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+            <li class="nav-item">
+                <a href="{{route('customers')}}"class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Customers</p>
+                </a>
+              </li>
+              </ul>
+              <ul class="nav nav-treeview">
+            <li class="nav-item">
+                <a href="{{route('users')}}"class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Users</p>
+                </a>
+              </li>
+              </ul>
+            </li>
+
+
+             <ul class="nav nav-treeview">
+            <li class="nav-item">
+                <a href="#"class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Reservation</p>
                 </a>
               </li>
               
-              <li class="nav-item">
-                <a href="{{route('rates')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Rates</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Search Center</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('guests')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Guest</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('roomtype')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Room Types</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Room/Function Hall</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Services </p>
-                </a>
-              </li>
               
-           
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -319,6 +389,19 @@
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.js"></script>
 
+
+<!-- {{-- search query --}} -->
+<script src="{{ asset('assets/js/jquery-3.6.0.min.js') }}"></script>
+
+<!-- {{-- search query --}} -->
+<script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+
+<script>
+    $(document).ready( function () {
+    $('#myDataTable').DataTable();
+} );
+</script>
+
 <!-- PAGE PLUGINS -->
 <!-- jQuery Mapael -->
 <script src="plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
@@ -332,5 +415,11 @@
 <script src="dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard2.js"></script>
+<!-- icon plugins -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<script src="script.js"></script>
+
 </body>
 </html>

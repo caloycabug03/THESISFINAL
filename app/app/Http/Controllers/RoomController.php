@@ -3,24 +3,23 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\bookingsteps;
-use Illuminate\Database\Eloquent\Model;
+use App\Models\Room;
 
-
-class BookingStepsController extends Controller
+class RoomController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function room(Request $request)
     {
         //
-        $bookings = bookingsteps::all();
-        return view('website.booking', compact('bookings'))->with(request());
-    }
+        $rooms = Room::all();
 
+        return view('frontdesk.Services.room', ['rooms' => $rooms]);
+
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -39,20 +38,19 @@ class BookingStepsController extends Controller
      */
     public function store(Request $request)
     {
-        
         //
-        $bookings = new bookingsteps;
-        $bookings->checkinDate = $request->input('checkinDate');
-        $bookings->checkoutDate = $request->input('checkoutDate');
-        $bookings->numAdults = $request->input('numAdults');
-        $bookings->numChildren = $request->input('numChildren');
-        $bookings->numRooms = $request->input('numRooms');
+        $room = new Room;
+        $room->RoomNumber = $request->input('RoomNumber');
+        $room->Status = $request->input('Status');
+        $room->Type = $request->input('Type');
+        $room->Capacity = $request->input('Capacity');
+        $room->Price = $request->input('Price');
+        $room->Action  = $request->input('Action');
+      
 
-        $bookings->save();
+        $room->save();
 
-        return redirect('website.booking')->with('Success', 'Data Saved');
-
-
+    return redirect()->route('room');
     }
 
     /**

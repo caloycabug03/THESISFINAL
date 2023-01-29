@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Str;
+
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -58,4 +60,22 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+
+
+     //displaying the fname and lname to layout.blade
+     public function getNameAttribute($value)
+     {
+         return Str::of($value)->title();
+     }
+    //  public function getLnameAttribute($value)
+    //  {
+    //      return Str::of($value)->title();
+    //  }
+ 
+    //  public function getRoleAttribute($value)
+    //  {
+    //      return $value;
+    //  }
+ 
 }

@@ -22,32 +22,32 @@ class UserSeeder extends Seeder
       
 
         DB::table('users')->insert([
-            'name' =>'front desk',
+            'name' =>'Front desk Department',
             'email' =>'frontdesk'.'@gmail.com',
             'password' => Hash::make('password'),
         ]);
 
         DB::table('users')->insert([
-            'name' =>'Manager ',
+            'name' =>'Manager Department ',
             'email' =>'manager'.'@gmail.com',
             'password' => Hash::make('password'),
         ]);
 
         DB::table('users')->insert([
-            'name' =>'school accountant',
+            'name' =>'School Accountant',
             'email' =>'schoolaccountant'.'@gmail.com',
             'password' => Hash::make('password'),
         ]);
 
         DB::table('users')->insert([
-            'name' =>'housekeeping',
+            'name' =>'Housekeeping Department',
             'email' =>'housekeeping'.'@gmail.com',
             'password' => Hash::make('password'),
         ]);
 
         DB::table('users')->insert([
             'name' =>'Rodinel Bergado',
-            'email' =>'bergado'.'@gmail.com',
+            'email' =>'rodinelbergado'.'@gmail.com',
             'password' => Hash::make('password'),
         ]);
     }

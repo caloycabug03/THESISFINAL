@@ -1,68 +1,29 @@
-
-
 @extends('layouts/app')
 
-
 @section('content')
- <!-- Main content -->
- <section class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12">
-            <div class="card">
-              <div class="card-header">
-                <button class=".btn-lg">Add</button>
-                <button class=".btn-lg">Edit</button>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  Launch demo modal
+</button>
 
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body">
-                <table id="example2" class="table table-bordered table-hover">
-                  <thead>
-                  <tr>
-                    <th>FULL NAME</th>
-                    <th>ROOM #</th>
-                    <th>PHONE #</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  <tr>
-                    <td>CARDO DALISAY</td>
-                    <td>212
-                    </td>
-                    <td>09232374552</td>
-                  </tr>
-                  <tr>
-                    <td>CARDO DALISAY</td>
-                    <td>212
-                    </td>
-                    <td>09232374552</td>
-                  </tr>
-                  <tr>
-                    <td>CARDO DALISAY</td>
-                    <td>212
-                    </td>
-                    <td>09232374552</td>
-                  </tr>
-                  <tr>
-                    <td>CARDO DALISAY</td>
-                    <td>212
-                    </td>
-                    <td>09232374552</td>
-                  </tr>
-                 
-                  </tbody>
-                  <tfoot>
-                  <tr>
-                  <th>FULL NAME</th>
-                    <th>ROOM #</th>
-                    <th>PHONE #</th>
-                  </tr>
-                  </tfoot>
-                </table>
-              </div>
-              <!-- /.card-body -->
-            </div>
- 
-
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 @endsection
