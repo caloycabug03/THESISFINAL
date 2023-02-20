@@ -13,7 +13,7 @@
 
              
 
-              <h2>Expired Guests</h2>
+              <h2>Check-out Guests</h2>
 
               </div>
               <!-- /.card-header -->

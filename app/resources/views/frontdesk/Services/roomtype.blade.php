@@ -14,11 +14,15 @@
               <!-- ADD MODAL BUTTON -->
               <!-- Button trigger modal -->
                            <h2>Room Type</h2>
-
+                           @if (Auth::check())
+                         @if (Auth::user()->role != 'Housekeeping' )
+                         @if (Auth::user()->role != 'School Accountant' )
                           <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModalCenter">
                             Add
                           </button>
-
+                          @endif
+                          @endif
+                          @endif
                           <!-- Modal -->
                           <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                             <div class="modal-dialog modal-scrollable modal-dialog-centered" role="document">

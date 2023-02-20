@@ -7,11 +7,21 @@
 
       <h2>Dashboard</h2>
         <!-- Info boxes -->
+      
         <div class="row">
           <div class="col-12 col-sm-6 col-md-3">
+  
+         
+            
+
+
+            @if (Auth::user()->role != 'School Accountant' )
+            @if (Auth::user()->role != 'Housekeeping' )
+
             <div class="info-box">
-              
+            
               <div class="info-box-content">
+            
                 <span class="info-box-text">Available Rooms</span>
                 <i class="ion ion-bag"></i>
                 <span class="info-box-number">
@@ -59,15 +69,22 @@
               <div class="info-box-content">
                 <span class="info-box-text">Arriving Customers</span>
                 <span class="info-box-number">5</span>
+               
               </div>
               <!-- /.info-box-content -->
+      
             </div>
+            @endif
+            @endif
+
             <!-- /.info-box -->
           </div>
+   
+
           <!-- /.col -->
         </div>
         <!-- /.row -->
-
+      
         <!-- Main content -->
  <section class="content">
       <div class="container-fluid">
@@ -243,4 +260,6 @@
     </section>
     <!-- /.content -->
   </div>
+ 
+  
 @endsection

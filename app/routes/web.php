@@ -77,6 +77,10 @@ Route::middleware([
     //Routes for users sidebar inside the PMS
     Route::get('/users' , [UserController::class , 'displayUsers'])->name('users');
 
+
+
+
+
     // //Routes for room type sidebar inside the PMS
     // Route::post("roomtype.store" , [RoomTypeController::class , 'store'])->name('roomtype.store');
     // Route::get('/roomtype',[RoomTypeController::class , 'roomtype'])->name('roomtype');

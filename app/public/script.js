@@ -4,6 +4,15 @@ const cancelBtn = document.getElementById('cancel-btn');
 const sideNav = document.getElementById('sidenav');
 const modal = document.getElementById('modal');
 
+//navigation bar
+$(document).ready(function() {
+  $(".dropdown").hover(function() {
+    $(".dropdown-content").stop(true, true).slideDown("fast");
+  }, function() {
+    $(".dropdown-content").stop(true, true).slideUp("fast");
+  });
+});
+
 
 // top Button
 $(document).ready(function(){

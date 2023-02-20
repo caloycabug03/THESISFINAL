@@ -12,13 +12,21 @@
                 
 
               <!-- Button trigger modal -->
+
                          
                           <h2>Room</h2>
+
                          <!-- ADD MODAL BUTTON -->
                           <!-- Button trigger modal -->
+                          @if (Auth::check())
+                         @if (Auth::user()->role != 'Housekeeping' )
+                         @if (Auth::user()->role != 'School Accountant' )
                           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">
                             Add
                           </button>
+                          @endif
+                          @endif
+                          @endif
 
                           <!-- Modal -->
                           <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">

@@ -13,29 +13,20 @@ class TransactionsController extends Controller
      * @return \Illuminate\Http\Response
      */
 
+   
+
      public function customers(Request $request)
      {
         $transactions =  Transaction::all();
+        $transactionsSearch = $request->get('transactionsSearch');
+        $transactions = Transaction::where('Name','like','%'.$transactionsSearch.'%' )->oldest()->paginate(5) ;
 
         return view('frontdesk.Accounts.customer' , compact('transactions' ));
      }
   
     public function activeguest(Request $request)
     {
-        //      $request->validate([
-        //     'Name' => 'required',
-        //     'Email' => 'required',
-        //     'Address' => 'required',
-        //     'DateofBirth' => 'required',
-        //     'Gender' => 'required',
-        //     'AdultNum' => 'required',
-        //     'ChildrenNum' => 'required',
-        //     'CheckinDate' => 'required',
-        //     'CheckoutDate' => 'required',
-        //     'RoomType' => 'required',
-        //     'Price' => 'required',
-
-        // ]);
+        
         
         $transactions =  Transaction::all();
 
@@ -80,7 +71,21 @@ class TransactionsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+             $request->validate([
+            'Name' => 'required',
+            'Email' => 'required',
+            'Address' => 'required',
+            'DateofBirth' => 'required',
+            'Gender' => 'required',
+            'AdultNum' => 'required',
+            'ChildrenNum' => 'required',
+            'CheckinDate' => 'required',
+            'CheckoutDate' => 'required',
+            'RoomType' => 'required',
+            'Price' => 'required',
+
+        ]);
     
             $transaction = new Transaction;
             $transaction->Name = $request->input('Name');

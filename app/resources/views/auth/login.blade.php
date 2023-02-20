@@ -1,7 +1,12 @@
-<x-guest-layout>
-    <x-jet-authentication-card>
+<x-guest-layout >
+
+
+
+    <x-jet-authentication-card  style="background-color:black !important">
+  
+
         <x-slot name="logo">
-            <h1> <em>Welcome to PMS </em></h1>
+
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
@@ -14,6 +19,8 @@
 
         <form method="POST" action="{{ route('login') }}">
             @csrf
+
+            <div><h2 class="center"> <b>Welcome to PMS</b> </h2></div>
 
             <div>
                 <x-jet-label for="email"  />
@@ -46,3 +53,21 @@
         </form>
     </x-jet-authentication-card>
 </x-guest-layout>
+<style>
+        .bg-gray-100{
+
+           background-image: url('images/hotelmsat.jpg');
+           background-size: cover;
+
+        }
+
+        .element-style{
+            color:red;
+        }
+
+        .center {
+            margin: auto;
+            width: 50%;
+            padding: 20px;
+            }
+</style>

@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
 
 :root{
-    --transition: all 0.7s ease;
+    --transition: all 0.4s ease;
     --yellow: #f9d342;
     --dark: #292826;
     scroll-behavior: smooth;
@@ -16,12 +16,47 @@
 html{
     scroll-behavior: smooth;
 }
-body{
-    line-height: 1.6;
-    margin: 0;
-  padding: 0;
-  font-family: "montserrat";
-}
+/* navigation bar sytle */
+header {
+    /* background-image: linear-gradient(to right, #d1a170, #f7ae5a);
+    /* /*  */
+    padding: 30px 0; 
+  }
+
+ 
+  nav {
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  nav a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 40px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+  }
+  
+  nav a:hover {
+    background-color: yellow;
+    color: #FF5F6D;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+  }
+  
 
 /* top Button  */
 #topBtn{
@@ -44,18 +79,7 @@ body{
     background: #f9d342;
 
   }
-  #servicesBtn{
-    background: #f9d342;
-
-  }
-  #facilitiesBtn{
-    background: #f9d342;
-
-  }
-  #aboutusBtn{
-    background: #f9d342;
-
-  }
+ 
 .btn{
     font-size: 16px;
     text-transform: uppercase;
@@ -92,15 +116,63 @@ img{
         font-size: 14px;
     }
 }
+/* 
+/* video style */
+
+   #videoBG {
+    position:absolute;
+    z-index: -1;
+}
+@media (min-aspect-ratio: 16/9) {
+    #videoBG {
+        width:100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9) {
+    #videoBG {
+        width:auto;
+        height: 100%;
+    }
+}
+@media (max-width: 767px) {
+    #videoBG {
+        display: none;
+    }
+    body {
+        background: url('images/hotelmsat.jpg');
+        background-size: cover;
+    }
+}
+
+   /* .video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+  }
+  
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  @media (max-width: 767px) {
+    .video-container {
+      height: 300px;
+    }
+  } */
+  
 
 /* header */
 .header{
 
     /* image banner for home page */
    
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("images/HOTELBLUR.jpg") center/cover no-repeat   fixed  ;  /* Add the blur effect */
-  
-    min-height: 100vh;
     
 
     color: #fff;
@@ -290,7 +362,7 @@ img{
 .book{
 
     /* image background for booking form */
-    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("images/hotel.jpg") center/cover no-repeat fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85));
     color: #fff;
     padding: 40px 60px;
 }

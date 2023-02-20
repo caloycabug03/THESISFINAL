@@ -14,7 +14,10 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
   <!-- icons plugins -->
-  <script src="https://kit.fontawesome.com/e0dac7b697.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/e0dac7b697.js" crossorigin="anonymous"></script>
 </head>
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 <div class="wrapper">
@@ -38,20 +41,29 @@
       <li class="nav-item d-none d-sm-inline-block">
       </li>
 
-      {{-- logout --}}
+      <!-- {{-- logout --}} -->
       <li class="nav-item d-none d-sm-inline-block">
+
             <a class="nav-link" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
 
 
-            <i class="nav-icon fas fa-right-from-bracket"></i>
+                 
+ 
 
-                Logout
+
+          <i class="fa-regular fa-right-from-bracket " style="color:red" >LOGOUT</i>
+        
+
+ 
+ 
+
             </a>
             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                 @csrf
             </form>
+
           </li>
 
 
@@ -202,7 +214,7 @@
         @if (Auth::user()->name == null)
                 {{ route('login') }}
             @else
-                <a href="#" class="d-block">{{ Auth::user()->name}}</a>
+               <b>{{ Auth::user()->name}}</b>
                 <!-- {{-- {{ Auth::user()->fname +" "+Auth::user()->lname }} --}} -->
             @endif
         </div>
@@ -262,7 +274,7 @@
             <li class="nav-item">
                 <a href="{{route('expireguest')}}"class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Expired Guests</p>
+                  <p>Check-out Guests</p>
                 </a>
               </li>
               </ul>
@@ -323,6 +335,7 @@
               </li>
               </ul>
               <ul class="nav nav-treeview">
+            
             <li class="nav-item">
                 <a href="{{route('users')}}"class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
@@ -331,7 +344,7 @@
               </li>
               </ul>
             </li>
-
+           
 
              <ul class="nav nav-treeview">
             <li class="nav-item">
@@ -379,6 +392,7 @@
 </div>
 <!-- ./wrapper -->
 
+
 <!-- REQUIRED SCRIPTS -->
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
@@ -414,10 +428,8 @@
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="dist/js/pages/dashboard2.js"></script>
+<!-- <script src="dist/js/pages/dashboard2.js"></script> -->
 <!-- icon plugins -->
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 <script src="script.js"></script>
 

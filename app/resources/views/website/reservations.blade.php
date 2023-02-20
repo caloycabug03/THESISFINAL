@@ -6,7 +6,7 @@
         @endforeach
         
 <div class="col-sm-3">
-<table class="table table-dark ">
+<table class="table table-dark  " id="tableform">
   <thead class= "thead-dark">
     <tr class="text-left">
       <th  scope="col">Check-in Date</th>
@@ -35,7 +35,7 @@
 
 <div class="col-sm-6">
 
-<form action="getdata" method="POST">
+<form action="getdata" method="POST" id="form">
   @csrf
   <div class="form-row">
     <div class="form-group col-md-6">
@@ -71,7 +71,6 @@
       </select>
     </div>
   </div>
- 
     
     
   
@@ -79,3 +78,4 @@
 
 </form>
 </div>
+
